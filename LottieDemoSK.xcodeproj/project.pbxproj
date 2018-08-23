@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2E87C60EAE73A72F5E570B /* Pods_LottieDemoSK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AA4037FB64AD767101FC /* Pods_LottieDemoSK.framework */; };
+		CB1A9621212F072B00E9B18C /* servishero_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CB1A9620212F072B00E9B18C /* servishero_loading.json */; };
 		CBFD0AA7212F064900AE1B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD0AA6212F064900AE1B7A /* AppDelegate.swift */; };
-		CBFD0AA9212F064900AE1B7A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBFD0AA8212F064900AE1B7A /* GameScene.sks */; };
-		CBFD0AAB212F064900AE1B7A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBFD0AAA212F064900AE1B7A /* Actions.sks */; };
 		CBFD0AAD212F064900AE1B7A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD0AAC212F064900AE1B7A /* GameScene.swift */; };
 		CBFD0AAF212F064900AE1B7A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFD0AAE212F064900AE1B7A /* GameViewController.swift */; };
 		CBFD0AB2212F064900AE1B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFD0AB0212F064900AE1B7A /* Main.storyboard */; };
@@ -18,10 +18,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4602AA4037FB64AD767101FC /* Pods_LottieDemoSK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieDemoSK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		811288665D8E12371776EEFA /* Pods-LottieDemoSK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieDemoSK.release.xcconfig"; path = "Pods/Target Support Files/Pods-LottieDemoSK/Pods-LottieDemoSK.release.xcconfig"; sourceTree = "<group>"; };
+		C794A262EE208C5C1C185D1B /* Pods-LottieDemoSK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieDemoSK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LottieDemoSK/Pods-LottieDemoSK.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1A9620212F072B00E9B18C /* servishero_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = servishero_loading.json; sourceTree = "<group>"; };
 		CBFD0AA3212F064900AE1B7A /* LottieDemoSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieDemoSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFD0AA6212F064900AE1B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBFD0AA8212F064900AE1B7A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		CBFD0AAA212F064900AE1B7A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		CBFD0AAC212F064900AE1B7A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		CBFD0AAE212F064900AE1B7A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CBFD0AB1212F064900AE1B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2E87C60EAE73A72F5E570B /* Pods_LottieDemoSK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F6CBE0BA349374C2470ACD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C794A262EE208C5C1C185D1B /* Pods-LottieDemoSK.debug.xcconfig */,
+				811288665D8E12371776EEFA /* Pods-LottieDemoSK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		902E571C89F3F59DA5614015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4602AA4037FB64AD767101FC /* Pods_LottieDemoSK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBFD0A9A212F064900AE1B7A = {
 			isa = PBXGroup;
 			children = (
 				CBFD0AA5212F064900AE1B7A /* LottieDemoSK */,
 				CBFD0AA4212F064900AE1B7A /* Products */,
+				7F6CBE0BA349374C2470ACD9 /* Pods */,
+				902E571C89F3F59DA5614015 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +82,10 @@
 		CBFD0AA5212F064900AE1B7A /* LottieDemoSK */ = {
 			isa = PBXGroup;
 			children = (
+				CB1A9620212F072B00E9B18C /* servishero_loading.json */,
 				CBFD0AA6212F064900AE1B7A /* AppDelegate.swift */,
-				CBFD0AA8212F064900AE1B7A /* GameScene.sks */,
-				CBFD0AAA212F064900AE1B7A /* Actions.sks */,
-				CBFD0AAC212F064900AE1B7A /* GameScene.swift */,
 				CBFD0AAE212F064900AE1B7A /* GameViewController.swift */,
+				CBFD0AAC212F064900AE1B7A /* GameScene.swift */,
 				CBFD0AB0212F064900AE1B7A /* Main.storyboard */,
 				CBFD0AB3212F064B00AE1B7A /* Assets.xcassets */,
 				CBFD0AB5212F064B00AE1B7A /* LaunchScreen.storyboard */,
@@ -80,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBFD0ABB212F064B00AE1B7A /* Build configuration list for PBXNativeTarget "LottieDemoSK" */;
 			buildPhases = (
+				66F2EDB31013E52DC909A349 /* [CP] Check Pods Manifest.lock */,
 				CBFD0A9F212F064900AE1B7A /* Sources */,
 				CBFD0AA0212F064900AE1B7A /* Frameworks */,
 				CBFD0AA1212F064900AE1B7A /* Resources */,
+				2C0A27BECF9E92BC67EDBD87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +155,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBFD0AB2212F064900AE1B7A /* Main.storyboard in Resources */,
-				CBFD0AA9212F064900AE1B7A /* GameScene.sks in Resources */,
+				CB1A9621212F072B00E9B18C /* servishero_loading.json in Resources */,
 				CBFD0AB4212F064B00AE1B7A /* Assets.xcassets in Resources */,
 				CBFD0AB7212F064B00AE1B7A /* LaunchScreen.storyboard in Resources */,
-				CBFD0AAB212F064900AE1B7A /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C0A27BECF9E92BC67EDBD87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LottieDemoSK/Pods-LottieDemoSK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LottieDemoSK/Pods-LottieDemoSK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66F2EDB31013E52DC909A349 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottieDemoSK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBFD0A9F212F064900AE1B7A /* Sources */ = {
@@ -290,6 +351,7 @@
 		};
 		CBFD0ABC212F064B00AE1B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C794A262EE208C5C1C185D1B /* Pods-LottieDemoSK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +370,7 @@
 		};
 		CBFD0ABD212F064B00AE1B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811288665D8E12371776EEFA /* Pods-LottieDemoSK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

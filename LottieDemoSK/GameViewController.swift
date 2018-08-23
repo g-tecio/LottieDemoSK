@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 import SpriteKit
 import GameplayKit
 
@@ -14,33 +15,53 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
-        if let scene = GKScene(fileNamed: "GameScene") {
-            
-            // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameScene? {
-                
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
-                }
-            }
-        }
-    }
+	
+		// MARK: view
+		view.backgroundColor = UIColor.white
+		
+		// MARK: animationView
+		let animationView = LOTAnimationView(name: "servishero_loading")
+		
+			// Setup Lottie animaitonView
+			animationView.contentMode = .scaleAspectFit
+			animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+			animationView.center = self.view.center
+			animationView.backgroundColor = UIColor.clear
+
+			// Add Lottie animaitonView as Sub-View to Main View
+			view.addSubview(animationView)
+
+			// Turn looping on and Play Lottie Animation
+			animationView.loopAnimation = true
+			animationView.play()
+
+		// MARK: gameView
+		let gameView = SKView()
+
+			// Setup gameView
+			gameView.contentMode = .scaleToFill
+			gameView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+			gameView.center = self.view.center
+			gameView.allowsTransparency = true
+
+			// Add Lottie gameView as Sub-View to Main View
+			view.addSubview(gameView)
+		
+		// MARK: gameScene
+		let gameScene = GameScene(size: gameView.bounds.size)
+		
+			// Setup gameScene
+			gameScene.backgroundColor = UIColor.clear
+			gameScene.scaleMode = .resizeFill
+		
+			// Present Scene
+			gameView.presentScene(gameScene)
+		
+			// Performance monitoring of SpriteKit
+			gameView.ignoresSiblingOrder = true
+			gameView.showsFPS = true
+			gameView.showsNodeCount = true
+	}
 
     override var shouldAutorotate: Bool {
         return true
